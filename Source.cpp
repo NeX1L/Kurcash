@@ -10,8 +10,8 @@ void menu2();
 void menu3();
 void menupozovatel();
 void menuadmin();
-void secretslovo(string& secrslo);
-void provekapassword(string& password);
+void secretslovo(string &secrslo);
+void provekapassword(string &password);
 void menuosnova();
 void menuregistration();
 void menuregistrationfilepol();
@@ -41,7 +41,7 @@ struct BUS {
 	string times2[MAX_STOPS];
 	int numStops;
 };
-int main() {
+int main(){
 	setlocale(LC_ALL, "rus");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
@@ -52,7 +52,7 @@ int main() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			menuosnova();
 		}
 	}
@@ -74,50 +74,50 @@ int main() {
 	}
 	case 4: {
 		system("cls");
-		cout << "Благодарим за использовние!" << endl;
+		cout << "Р‘Р»Р°РіРѕРґР°СЂРёРј Р·Р° РёСЃРїРѕР»СЊР·РѕРІРЅРёРµ!" << endl;
 		exit(0);
 		break;
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		main();
 		break;
 	}
 	}
 }
 void menuosnova() {
-	cout << "\t\t\tМеню" << endl;
-	cout << "1. Регистрация пользователя и администратора" << endl;
-	cout << "2. Авторизация пользователя и администратора" << endl;
-	cout << "3. Восстановление пароля" << endl;
-	cout << "4. Выход из приложения" << endl;
-	cout << "Ваш выбор: ";
+	cout << "\t\t\tРњРµРЅСЋ" << endl;
+	cout << "1. Р РµРіРёСЃС‚СЂР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°" << endl;
+	cout << "2. РђРІС‚РѕСЂРёР·Р°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Рё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°" << endl;
+	cout << "3. Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїР°СЂРѕР»СЏ" << endl;
+	cout << "4. Р’С‹С…РѕРґ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ" << endl;
+	cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 }
 void menuregistration() {
-	cout << "1. Зарегестрироваться пользователем" << endl;
-	cout << "2. Зарегестрироваться администратором" << endl;
-	cout << "3. Вернуться в меню" << endl;
-	cout << "Ваш выбор: ";
+	cout << "1. Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј" << endl;
+	cout << "2. Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРј" << endl;
+	cout << "3. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РјРµРЅСЋ" << endl;
+	cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 }
 void menuavyorizaciya() {
-	cout << "1. Авторизоваться пользователем" << endl;
-	cout << "2. Авторизоваться администратором" << endl;
-	cout << "3. Вернуться в меню" << endl;
-	cout << "Ваш выбор: ";
+	cout << "1. РђРІС‚РѕСЂРёР·РѕРІР°С‚СЊСЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј" << endl;
+	cout << "2. РђРІС‚РѕСЂРёР·РѕРІР°С‚СЊСЃСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРј" << endl;
+	cout << "3. Р’РµСЂРЅСѓС‚СЊСЃСЏ РІ РјРµРЅСЋ" << endl;
+	cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 }
 void menuvvostanovlenie() {
-	cout << "1. Ввостановить пароль администратору" << endl;
-	cout << "2. Ввостановить пароль пользователю" << endl;
-	cout << "3. Вернутся в меню" << endl;
-	cout << "Ваш выбор: ";
+	cout << "1. Р’РІРѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ" << endl;
+	cout << "2. Р’РІРѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ" << endl;
+	cout << "3. Р’РµСЂРЅСѓС‚СЃСЏ РІ РјРµРЅСЋ" << endl;
+	cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 }
 void menuadmina1() {
-	cout << "1. Вывести всех пользователей в таблицу" << endl;
-	cout << "2. Заблокировать пользователя" << endl;
-	cout << "3. Разблокировать пользователя" << endl;
-	cout << "4. Добавить расписание" << endl;
-	cout << "5. Просмотреть конкретное расписание" << endl;
+	cout << "1. Р’С‹РІРµСЃС‚Рё РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РІ С‚Р°Р±Р»РёС†Сѓ" << endl;
+	cout << "2. Р—Р°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" << endl;
+	cout << "3. Р Р°Р·Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" << endl;
+	cout << "4. Р”РѕР±Р°РІРёС‚СЊ СЂР°СЃРїРёСЃР°РЅРёРµ" << endl;
+	cout << "5. РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РєРѕРЅРєСЂРµС‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ" << endl;
 }
 void menu1() {
 	setlocale(LC_ALL, "rus");
@@ -128,7 +128,7 @@ void menu1() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			menuregistration();
 		}
 	}
@@ -152,7 +152,7 @@ void menu1() {
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		menu1();
 		break;
 	}
@@ -167,7 +167,7 @@ void menu2() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			menuavyorizaciya();
 		}
 	}
@@ -191,7 +191,7 @@ void menu2() {
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		menu1();
 		break;
 	}
@@ -206,7 +206,7 @@ void menu3() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			menuvvostanovlenie();
 		}
 	}
@@ -232,7 +232,7 @@ void menu3() {
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		menu3();
 		break;
 	}
@@ -242,11 +242,11 @@ void menuregistrationfilepol() {
 	setlocale(LC_ALL, "rus");
 	int ind = 0;
 	string user, password, userproverka, secrslovo, proverka, status;
-	cout << "Введите имя пользователя: ";
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 	getline(cin, user);
 	if (user.find(' ') != string::npos) {
 		system("cls");
-		cout << "Никнейм не должен содержать пробелов.\n";
+		cout << "РќРёРєРЅРµР№Рј РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ.\n";
 		menuregistrationfilepol();
 	}
 	else {
@@ -254,29 +254,29 @@ void menuregistrationfilepol() {
 		while (filepol >> userproverka || !filepol.eof()) {
 			if (user == userproverka) {
 				system("cls");
-				cout << "Такой пользователь существует, введите другой никнейм" << endl;
+				cout << "РўР°РєРѕР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РІРІРµРґРёС‚Рµ РґСЂСѓРіРѕР№ РЅРёРєРЅРµР№Рј" << endl;
 				menuregistrationfilepol();
 			}
 		}
 		filepol.close();
-		provekapassword(password);
-		secretslovo(secrslovo);
-		status = "g";
-		ofstream filepolz("userlogpass.txt", ios::app);
-		filepolz << user << " " << password << " " << status << " " << secrslovo << endl;
-		filepolz.close();
-		system("cls");
-		cout << "Регистрация прошла успешно, возвращаю вас в меню" << endl;
-		main();
-
+		    provekapassword(password);
+			secretslovo(secrslovo);
+			status = "g";
+			ofstream filepolz("userlogpass.txt", ios::app);
+			filepolz << user << " " << password << " " << status << " " << secrslovo << endl;
+			filepolz.close();
+			system("cls");
+			cout << "Р РµРіРёСЃС‚СЂР°С†РёСЏ РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІРѕР·РІСЂР°С‰Р°СЋ РІР°СЃ РІ РјРµРЅСЋ" << endl;
+			main();
+		
 	}
 }
-void secretslovo(string& secrslo) {
-	cout << "Введите секретное слово в случаи восстановления пароля: ";
+void secretslovo(string &secrslo) {
+	cout << "Р’РІРµРґРёС‚Рµ СЃРµРєСЂРµС‚РЅРѕРµ СЃР»РѕРІРѕ РІ СЃР»СѓС‡Р°Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РїР°СЂРѕР»СЏ: ";
 	getline(cin, secrslo);
 	if (secrslo.find(' ') != string::npos) {
 		system("cls");
-		cout << "Секретное слово не должено содержать пробелов.\n";
+		cout << "РЎРµРєСЂРµС‚РЅРѕРµ СЃР»РѕРІРѕ РЅРµ РґРѕР»Р¶РµРЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ.\n";
 		secretslovo(secrslo);
 	}
 	else {
@@ -284,11 +284,11 @@ void secretslovo(string& secrslo) {
 	}
 }
 void provekapassword(string& password) {
-	cout << "Введите пароль: ";
+	cout << "Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ: ";
 	getline(cin, password);
 	if (password.find(' ') != string::npos) {
 		system("cls");
-		cout << "Пароль не должен содержать пробелов.\n";
+		cout << "РџР°СЂРѕР»СЊ РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ.\n";
 		provekapassword(password);
 	}
 }
@@ -296,19 +296,19 @@ void vvostanovleniepass(int chislo) {
 	if (chislo == 2) {
 		int number = 0, ind = 0;
 		string username, secretslovo, password, username1, secretslovo1, status;
-		cout << "Введите ваше имя пользователя: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 		getline(cin, username);
 		if (username.find(' ') != string::npos) {
 			system("cls");
-			cout << "Никнейм не должен содержать пробелов, делайте ввод заново\n";
+			cout << "РќРёРєРЅРµР№Рј РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ, РґРµР»Р°Р№С‚Рµ РІРІРѕРґ Р·Р°РЅРѕРІРѕ\n";
 			number = 2;
 			vvostanovleniepass(number);
 		}
-		cout << "Введите секреткное слово которое вы указывали при регитсрации: ";
+		cout << "Р’РІРµРґРёС‚Рµ СЃРµРєСЂРµС‚РєРЅРѕРµ СЃР»РѕРІРѕ РєРѕС‚РѕСЂРѕРµ РІС‹ СѓРєР°Р·С‹РІР°Р»Рё РїСЂРё СЂРµРіРёС‚СЃСЂР°С†РёРё: ";
 		getline(cin, secretslovo);
 		if (secretslovo.find(' ') != string::npos) {
 			system("cls");
-			cout << "Секретное слово не должно содержать пробелов, делайте ввод заново\n";
+			cout << "РЎРµРєСЂРµС‚РЅРѕРµ СЃР»РѕРІРѕ РЅРµ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ, РґРµР»Р°Р№С‚Рµ РІРІРѕРґ Р·Р°РЅРѕРІРѕ\n";
 			number = 2;
 			vvostanovleniepass(number);
 		}
@@ -321,33 +321,33 @@ void vvostanovleniepass(int chislo) {
 			}
 		}
 		FILE.close();
-		if (ind != 0) {
+		if (ind!= 0) {
 			system("cls");
-			cout << "Вот ваш пароль: " << password << endl;
+			cout << "Р’РѕС‚ РІР°С€ РїР°СЂРѕР»СЊ: " << password << endl;
 			main();
 		}
 		else {
 			system("cls");
-			cout << "Не могу вас найти, возвращаю в меню" << endl;
+			cout << "РќРµ РјРѕРіСѓ РІР°СЃ РЅР°Р№С‚Рё, РІРѕР·РІСЂР°С‰Р°СЋ РІ РјРµРЅСЋ" << endl;
 			main();
 		}
 	}
 	else {
 		int number = 0, ind = 0;
 		string username, secretslovo, password, username1, secretslovo1, status;
-		cout << "Введите ваше имя пользователя: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 		getline(cin, username);
 		if (username.find(' ') != string::npos) {
 			system("cls");
-			cout << "Никнейм не должен содержать пробелов, делайте ввод заново\n";
+			cout << "РќРёРєРЅРµР№Рј РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ, РґРµР»Р°Р№С‚Рµ РІРІРѕРґ Р·Р°РЅРѕРІРѕ\n";
 			number = 2;
 			vvostanovleniepass(number);
 		}
-		cout << "Введите секреткное слово которое вы указывали при регитсрации: ";
+		cout << "Р’РІРµРґРёС‚Рµ СЃРµРєСЂРµС‚РєРЅРѕРµ СЃР»РѕРІРѕ РєРѕС‚РѕСЂРѕРµ РІС‹ СѓРєР°Р·С‹РІР°Р»Рё РїСЂРё СЂРµРіРёС‚СЃСЂР°С†РёРё: ";
 		getline(cin, secretslovo);
 		if (secretslovo.find(' ') != string::npos) {
 			system("cls");
-			cout << "Секретное слово не должно содержать пробелов, делайте ввод заново\n";
+			cout << "РЎРµРєСЂРµС‚РЅРѕРµ СЃР»РѕРІРѕ РЅРµ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ, РґРµР»Р°Р№С‚Рµ РІРІРѕРґ Р·Р°РЅРѕРІРѕ\n";
 			number = 2;
 			vvostanovleniepass(number);
 		}
@@ -362,12 +362,12 @@ void vvostanovleniepass(int chislo) {
 		FILE.close();
 		if (ind != 0) {
 			system("cls");
-			cout << "Вот ваш пароль: " << password << endl;
+			cout << "Р’РѕС‚ РІР°С€ РїР°СЂРѕР»СЊ: " << password << endl;
 			main();
 		}
 		else {
 			system("cls");
-			cout << "Не могу вас найти, возвращаю в меню" << endl;
+			cout << "РќРµ РјРѕРіСѓ РІР°СЃ РЅР°Р№С‚Рё, РІРѕР·РІСЂР°С‰Р°СЋ РІ РјРµРЅСЋ" << endl;
 			main();
 		}
 	}
@@ -376,11 +376,11 @@ void menuregistrationfileadmin() {
 	setlocale(LC_ALL, "rus");
 	int ind = 0;
 	string user, password, userproverka, secrslovo, proverka, status;
-	cout << "Введите имя пользователя: ";
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 	getline(cin, user);
 	if (user.find(' ') != string::npos) {
 		system("cls");
-		cout << "Никнейм не должен содержать пробелов.\n";
+		cout << "РќРёРєРЅРµР№Рј РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСЂРѕР±РµР»РѕРІ.\n";
 		menuregistrationfileadmin();
 	}
 	else {
@@ -388,7 +388,7 @@ void menuregistrationfileadmin() {
 		while (filepol >> userproverka || !filepol.eof()) {
 			if (user == userproverka) {
 				system("cls");
-				cout << "Такой пользователь существует, введите другой никнейм" << endl;
+				cout << "РўР°РєРѕР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РІРІРµРґРёС‚Рµ РґСЂСѓРіРѕР№ РЅРёРєРЅРµР№Рј" << endl;
 				menuregistrationfileadmin();
 			}
 		}
@@ -400,7 +400,7 @@ void menuregistrationfileadmin() {
 		filepolz << user << " " << password << " " << status << " " << secrslovo << endl;
 		filepolz.close();
 		system("cls");
-		cout << "Регистрация прошла успешно, возвращаю вас в меню" << endl;
+		cout << "Р РµРіРёСЃС‚СЂР°С†РёСЏ РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІРѕР·РІСЂР°С‰Р°СЋ РІР°СЃ РІ РјРµРЅСЋ" << endl;
 		main();
 
 	}
@@ -409,7 +409,7 @@ void menuavyorizaciyafilepol() {
 	setlocale(LC_ALL, "rus");
 	int ind = 0, number = 0;
 	string user, password, USer, PASSword, slovo, status;
-	cout << "Введите имя пользователя: ";
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: ";
 	getline(cin, user);
 	if (user == "0") {
 		system("cls");
@@ -418,7 +418,7 @@ void menuavyorizaciyafilepol() {
 	}
 	if (user.find(' ') != string::npos) {
 		system("cls");
-		cout << "Не вводите никнейм через пробел, попробуйте еще раз.\n";
+		cout << "РќРµ РІРІРѕРґРёС‚Рµ РЅРёРєРЅРµР№Рј С‡РµСЂРµР· РїСЂРѕР±РµР», РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.\n";
 		menuavyorizaciyafilepol();
 	}
 	else {
@@ -433,19 +433,19 @@ void menuavyorizaciyafilepol() {
 		}
 		fileavt.close();
 	}
-	if (status == "заблокирован") {
+	if (status == "Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ") {
 		system("cls");
-		cout << "Ваш профиль заблокирован!" << endl;
+		cout << "Р’Р°С€ РїСЂРѕС„РёР»СЊ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ!" << endl;
 		main();
 	}
 	if (ind == 1) {
 		system("cls");
-		cout << "Добро пожаловать!" << endl;
+		cout << "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!" << endl;
 		void menupozovatel();
 	}
 	else {
 		system("cls");
-		cout << "Если вы забыли пароль, нажмите 0" << endl;
+		cout << "Р•СЃР»Рё РІС‹ Р·Р°Р±С‹Р»Рё РїР°СЂРѕР»СЊ, РЅР°Р¶РјРёС‚Рµ 0" << endl;
 		menuavyorizaciyafilepol();
 	}
 }
@@ -453,7 +453,7 @@ void menuavyorizaciyafileadmin() {
 	setlocale(LC_ALL, "rus");
 	int ind = 0, number = 0;
 	string user, password, USer, PASSword, slovo, status;
-	cout << "Введите имя администратора: ";
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°: ";
 	getline(cin, user);
 	if (user == "0") {
 		system("cls");
@@ -462,7 +462,7 @@ void menuavyorizaciyafileadmin() {
 	}
 	if (user.find(' ') != string::npos) {
 		system("cls");
-		cout << "Не вводите никнейм через пробел, попробуйте еще раз.\n";
+		cout << "РќРµ РІРІРѕРґРёС‚Рµ РЅРёРєРЅРµР№Рј С‡РµСЂРµР· РїСЂРѕР±РµР», РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.\n";
 		menuavyorizaciyafileadmin();
 	}
 	else {
@@ -479,12 +479,12 @@ void menuavyorizaciyafileadmin() {
 	}
 	if (ind == 1) {
 		system("cls");
-		cout << "Добро пожаловать!" << endl;
+		cout << "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!" << endl;
 		menuadmin();
 	}
 	else {
 		system("cls");
-		cout << "Если вы забыли пароль, нажмите 0" << endl;
+		cout << "Р•СЃР»Рё РІС‹ Р·Р°Р±С‹Р»Рё РїР°СЂРѕР»СЊ, РЅР°Р¶РјРёС‚Рµ 0" << endl;
 		menuavyorizaciyafileadmin();
 	}
 }
@@ -500,7 +500,7 @@ void menuadmin() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			menuadmina1();
 		}
 	}
@@ -532,7 +532,7 @@ void menuadmin() {
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		menuadmin();
 		break;
 	}
@@ -545,27 +545,27 @@ void blockpolzovatel() {
 	ifstream fin("userlogpass.txt");
 	ofstream fout("temp.txt");
 	tablicarazblock();
-	cout << "Введите логин пользователя, которого нужно заблокировать: ";
+	cout << "Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РєРѕС‚РѕСЂРѕРіРѕ РЅСѓР¶РЅРѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ: ";
 	getline(cin, blocklogin);
 	if (blocklogin.find(' ') != string::npos) {
 		fin.close();
 		fout.close();
 		system("cls");
-		cout << "Не вводите никнейм через пробел, попробуйте еще раз.\n";
+		cout << "РќРµ РІРІРѕРґРёС‚Рµ РЅРёРєРЅРµР№Рј С‡РµСЂРµР· РїСЂРѕР±РµР», РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.\n";
 		Sleep(3000);
 		blockpolzovatel();
 	}
 	else {
 		while (fin >> login >> pass >> status >> secretslovo) {
-			if (status == "заблокирован" && login == blocklogin) {
+			if (status == "Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ" && login == blocklogin) {
 				system("cls");
-				cout << "Этот пользователь заблокирован" << endl;
+				cout << "Р­С‚РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ" << endl;
 				remove("temp.txt");
 				menuadmin();
 			}
 			if (login == blocklogin) {
 				userfound = 1;
-				status = "заблокирован";
+				status = "Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ";
 			}
 			fout << login << " " << pass << " " << status << " " << secretslovo << endl;
 		}
@@ -575,13 +575,13 @@ void blockpolzovatel() {
 			remove("userlogpass.txt");
 			rename("temp.txt", "userlogpass.txt");
 			system("cls");
-			cout << "Пользователь " << blocklogin << " заблокирован" << endl;
+			cout << "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ " << blocklogin << " Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ" << endl;
 			menuadmin();
 		}
 		else {
 			remove("temp.txt");
 			system("cls");
-			cout << "Пользователь " << blocklogin << " не найден" << endl;
+			cout << "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ " << blocklogin << " РЅРµ РЅР°Р№РґРµРЅ" << endl;
 			menuadmin();
 		}
 	}
@@ -590,10 +590,10 @@ void tablicapol() {
 	system("cls");
 	string login, pass, secretslovo, status;
 	ifstream tablica("userlogpass.txt");
-	cout << "_______________________  Таблица  _________________________\n\n";
+	cout << "_______________________  РўР°Р±Р»РёС†Р°  _________________________\n\n";
 	int i = 1;
 	while (tablica >> login >> pass >> status >> secretslovo) {
-		cout << i << " Имя пользователя: " << login << endl;
+		cout << i << " РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: " << login << endl;
 		i++;
 	}
 	cout << "-----------------------------------------------------------\n\n";
@@ -603,11 +603,11 @@ void tablicazblock() {
 	system("cls");
 	string login, pass, secretslovo, status;
 	ifstream tablica("userlogpass.txt");
-	cout << "_______________________  Таблица  _________________________\n\n";
+	cout << "_______________________  РўР°Р±Р»РёС†Р°  _________________________\n\n";
 	int i = 1;
 	while (tablica >> login >> pass >> status >> secretslovo) {
-		if (status == "заблокирован") {
-			cout << i << " Имя пользователя: " << login << endl;
+		if (status == "Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ") {
+			cout << i << " РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: " << login << endl;
 			i++;
 		}
 	}
@@ -618,11 +618,11 @@ void tablicarazblock() {
 	system("cls");
 	string login, pass, secretslovo, status;
 	ifstream tablica("userlogpass.txt");
-	cout << "_______________________  Таблица  _________________________\n\n";
+	cout << "_______________________  РўР°Р±Р»РёС†Р°  _________________________\n\n";
 	int i = 1;
 	while (tablica >> login >> pass >> status >> secretslovo) {
 		if (status == "g") {
-			cout << i << " Имя пользователя: " << login << endl;
+			cout << i << " РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ: " << login << endl;
 			i++;
 		}
 	}
@@ -636,13 +636,13 @@ void razblockpolzovatel() {
 	ifstream fin("userlogpass.txt");
 	ofstream fout("temp.txt");
 	tablicazblock();
-	cout << "Введите логин пользователя, которого нужно раблокировать: ";
+	cout << "Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РєРѕС‚РѕСЂРѕРіРѕ РЅСѓР¶РЅРѕ СЂР°Р±Р»РѕРєРёСЂРѕРІР°С‚СЊ: ";
 	getline(cin, razblocklogin);
 	if (razblocklogin.find(' ') != string::npos) {
 		fin.close();
 		fout.close();
 		system("cls");
-		cout << "Не вводите никнейм через пробел, попробуйте еще раз.\n";
+		cout << "РќРµ РІРІРѕРґРёС‚Рµ РЅРёРєРЅРµР№Рј С‡РµСЂРµР· РїСЂРѕР±РµР», РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.\n";
 		Sleep(3000);
 		razblockpolzovatel();
 	}
@@ -660,56 +660,56 @@ void razblockpolzovatel() {
 			remove("userlogpass.txt");
 			rename("temp.txt", "userlogpass.txt");
 			system("cls");
-			cout << "Пользователь " << razblocklogin << " раблокирован" << endl;
+			cout << "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ " << razblocklogin << " СЂР°Р±Р»РѕРєРёСЂРѕРІР°РЅ" << endl;
 			menuadmin();
 		}
 		else {
 			remove("temp.txt");
 			system("cls");
-			cout << "Пользователь " << razblocklogin << " не найден" << endl;
+			cout << "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ " << razblocklogin << " РЅРµ РЅР°Р№РґРµРЅ" << endl;
 			menuadmin();
 		}
 	}
 }
 void NUMBER_bus() {
-	cout << "Введите номер рейса: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЂРµР№СЃР°: ";
 }
 void kol_stops() {
-	cout << "Введите количество остановок (максимум " << MAX_STOPS << " по городу" << "): ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕСЃС‚Р°РЅРѕРІРѕРє (РјР°РєСЃРёРјСѓРј " << MAX_STOPS << " РїРѕ РіРѕСЂРѕРґСѓ" << "): ";
 }
 void type_avt() {
-	cout << "Выберите тип автобуса: " << endl;
-	cout << "1. Городской" << endl;
-	cout << "2. Пригородный" << endl;
-	cout << "Ваш выбор: ";
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї Р°РІС‚РѕР±СѓСЃР°: " << endl;
+	cout << "1. Р“РѕСЂРѕРґСЃРєРѕР№" << endl;
+	cout << "2. РџСЂРёРіРѕСЂРѕРґРЅС‹Р№" << endl;
+	cout << "Р’Р°С€ РІС‹Р±РѕСЂ: ";
 }
 void addBus() {
 	int chislo, ind = 0;
 	BUS* buses = new BUS[1];
 	string line;
-	ofstream file("Автобусы.txt", ios::app);
-	ifstream infile("Автобусы.txt");
+	ofstream file("РђРІС‚РѕР±СѓСЃС‹.txt", ios::app); 
+	ifstream infile("РђРІС‚РѕР±СѓСЃС‹.txt"); 
 	NUMBER_bus();
 	while (!(cin >> buses[0].numberBUS))
 	{
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			NUMBER_bus();
 		}
 	}
-	bool exists = false;
+	bool exists = false; 
 	while (getline(infile, line) && exists != true) {
-		if (line.find("Автобус №" + to_string(buses[0].numberBUS)) != string::npos) {
+		if (line.find("РђРІС‚РѕР±СѓСЃ в„–" + to_string(buses[0].numberBUS)) != string::npos) {
 			system("cls");
 			exists = true;
-			cout << "Расписание Автобус №" << buses[0].numberBUS << " уже существует" << endl;
+			cout << "Р Р°СЃРїРёСЃР°РЅРёРµ РђРІС‚РѕР±СѓСЃ в„–" << buses[0].numberBUS << " СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚" << endl;
 			break;
 		}
 	}
-	infile.close();
-	if (exists == true) {
+	infile.close(); 
+	if (exists == true) { 
 		delete[] buses;
 		file.close();
 		menuadmin();
@@ -720,96 +720,96 @@ void addBus() {
 		cin.clear();
 		while (cin.get() != '\n'); {
 			system("cls");
-			cout << "Неверный ввод. Повторите." << endl;
+			cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 			type_avt();
 		}
 	}
 	switch (chislo) {
 	case 1: {
 		system("cls");
-		file << "Автобус №" << buses[0].numberBUS << endl;
+		file << "РђРІС‚РѕР±СѓСЃ в„–" << buses[0].numberBUS << endl;
 		kol_stops();
 		while (!(cin >> buses[0].numStops))
 		{
 			cin.clear();
 			while (cin.get() != '\n'); {
 				system("cls");
-				cout << "Неверный ввод. Повторите." << endl;
+				cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 				kol_stops();
 			}
 		}
 		string type;
-		type = "Городской";
-		file << "Тип:" << endl;
+		type = "Р“РѕСЂРѕРґСЃРєРѕР№";
+		file << "РўРёРї:" << endl;
 		file << type << endl;
 		for (int i = 0; i < buses[0].numStops; i++) {
-			cout << "Введите название остановки " << i + 1 << ": ";
+			cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РѕСЃС‚Р°РЅРѕРІРєРё " << i + 1 << ": ";
 			cin >> buses[0].stops[i];
-			cout << "Введите время прибытия к остановке" << i + 1 << ": ";
+			cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ Рє РѕСЃС‚Р°РЅРѕРІРєРµ" << i + 1 << ": ";
 			cin >> buses[0].times2[i];
-			cout << "Введите время отправления с остановки " << i + 1 << ": ";
+			cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ СЃ РѕСЃС‚Р°РЅРѕРІРєРё " << i + 1 << ": ";
 			cin >> buses[0].times1[i];
 		}
-		file << "Остановки:" << endl;
+		file << "РћСЃС‚Р°РЅРѕРІРєРё:" << endl;
 		for (int i = 0; i < buses[0].numStops; i++) {
-			file << buses[0].stops[i] << " к " << buses[0].times2[i] << " c " << buses[0].times1[i] << endl;
+			file << buses[0].stops[i] << " Рє " << buses[0].times2[i] << " c " << buses[0].times1[i] << endl;
 		}
 		delete[] buses;
 		file << endl;
 		file.close();
 		system("cls");
-		cout << "Расписание добавлено" << endl;
+		cout << "Р Р°СЃРїРёСЃР°РЅРёРµ РґРѕР±Р°РІР»РµРЅРѕ" << endl;
 		menuadmin();
 		break;
 
 	}
 	case 2: {
 		system("cls");
-		file << "Автобус №" << buses[0].numberBUS << endl;
+		file << "РђРІС‚РѕР±СѓСЃ в„–" << buses[0].numberBUS << endl;
 		string type, stops, time1, time2;
-		type = "Пригородный";
-		file << "Тип:" << endl;
+		type = "РџСЂРёРіРѕСЂРѕРґРЅС‹Р№";
+		file << "РўРёРї:" << endl;
 		file << type << endl;
-		cout << "Введите название остановки: ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РѕСЃС‚Р°РЅРѕРІРєРё: ";
 		cin >> buses[0].stops[0];
-		cout << "Введите время прибытия к остановке: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ Рє РѕСЃС‚Р°РЅРѕРІРєРµ: ";
 		cin >> buses[0].times2[0];
-		cout << "Введите время отправления с остановки: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ СЃ РѕСЃС‚Р°РЅРѕРІРєРё: ";
 		cin >> buses[0].times1[0];
-		cout << "Введите название пункта прибытия: ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РїСѓРЅРєС‚Р° РїСЂРёР±С‹С‚РёСЏ: ";
 		cin >> stops;
-		cout << "Введите время прибытия к пункту назначения: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РїСЂРёР±С‹С‚РёСЏ Рє РїСѓРЅРєС‚Сѓ РЅР°Р·РЅР°С‡РµРЅРёСЏ: ";
 		cin >> time1;
-		cout << "Введите время отправления с пункта назначения: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РѕС‚РїСЂР°РІР»РµРЅРёСЏ СЃ РїСѓРЅРєС‚Р° РЅР°Р·РЅР°С‡РµРЅРёСЏ: ";
 		cin >> time2;
-		file << "Остановки:" << endl;
-		file << buses[0].stops[0] << " к " << buses[0].times2[0] << " c " << buses[0].times1[0] << endl;
-		file << stops << " к " << time1 << " c " << time2 << endl;
+		file << "РћСЃС‚Р°РЅРѕРІРєРё:" << endl;
+		file << buses[0].stops[0] << " Рє " << buses[0].times2[0] << " c " << buses[0].times1[0] << endl;
+		file << stops << " Рє " << time1 << " c " << time2 << endl;
 		delete[] buses;
 		file << endl;
 		file.close();
 		system("cls");
-		cout << "Расписание добавлено" << endl;
+		cout << "Р Р°СЃРїРёСЃР°РЅРёРµ РґРѕР±Р°РІР»РµРЅРѕ" << endl;
 		menuadmin();
 		break;
 	}
 	default: {
 		system("cls");
-		cout << "Неверный ввод. Повторите." << endl;
+		cout << "РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ. РџРѕРІС‚РѕСЂРёС‚Рµ." << endl;
 		break;
 	}
 	}
 }
 void viewBus() {
-	ifstream infile("Автобусы.txt");
+	ifstream infile("РђРІС‚РѕР±СѓСЃС‹.txt");
 	int busNumber;
-	cout << "Введите номер автобуса: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р°РІС‚РѕР±СѓСЃР°: ";
 	cin >> busNumber;
 	system("cls");
 	bool found = false;
 	string line;
 	while (getline(infile, line)) {
-		if (line.find("Автобус №" + to_string(busNumber)) != string::npos) {
+		if (line.find("РђРІС‚РѕР±СѓСЃ в„–" + to_string(busNumber)) != string::npos) {
 			found = true;
 			cout << line << endl;
 			while (getline(infile, line) && line != "") {
@@ -822,7 +822,7 @@ void viewBus() {
 	menuadmin();
 	if (!found) {
 		infile.close();
-		cout << "Автобус №" << busNumber << " не найдено" << endl;
+		cout << "РђРІС‚РѕР±СѓСЃ в„–" << busNumber << " РЅРµ РЅР°Р№РґРµРЅРѕ" << endl;
 		menuadmin();
 	}
 }
